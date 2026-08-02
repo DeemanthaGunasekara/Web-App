@@ -69,7 +69,7 @@ require 'includes/header.php';
         <button type="submit" class="btn">Login</button>
     </form>
 
-    <p class="form-footer-link">Don't have an account? <a href="login.php">Register here</a></p>
+    <p class="form-footer-link">Don't have an account? <a href="register.php">Register here</a></p>
 </div>
 
 <?php require 'includes/footer.php'; ?>
