@@ -3,8 +3,7 @@ require 'includes/auth.php';
 require 'includes/db.php';
 require_login();
 
-// Only accept deletion via POST (matches the form in view_blog.php),
-// so a blog can't be deleted just by someone visiting a link/URL.
+
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header("Location: index.php");
     exit();
@@ -12,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 
 $id = (int)($_POST['id'] ?? 0);
 
-// Confirm the post exists and belongs to the logged-in user before deleting.
+
 $stmt = $conn->prepare("SELECT user_id FROM blogPost WHERE id = ?");
 $stmt->bind_param("i", $id);
 $stmt->execute();
@@ -25,7 +24,7 @@ if ($result->num_rows === 0) {
 
 $blog = $result->fetch_assoc();
 
-// --- AUTHORIZATION CHECK ---
+
 if ($blog['user_id'] != current_user_id()) {
     $page_title = "Not Allowed";
     require 'includes/header.php';
@@ -34,7 +33,7 @@ if ($blog['user_id'] != current_user_id()) {
     exit();
 }
 
-// Scope the DELETE to user_id = ? as well, as defense-in-depth.
+
 $delete = $conn->prepare("DELETE FROM blogPost WHERE id = ? AND user_id = ?");
 $delete->bind_param("ii", $id, $_SESSION['user_id']);
 $delete->execute();

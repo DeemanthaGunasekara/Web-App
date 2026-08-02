@@ -1,4 +1,4 @@
-/* ===== Reset & base ===== */
+
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
@@ -17,7 +17,7 @@ body {
 a { color: #2a6f6f; text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-/* ===== Header ===== */
+
 .site-header {
     background: #fff;
     border-bottom: 1px solid #e5e5e0;
@@ -45,10 +45,10 @@ a:hover { text-decoration: underline; }
 }
 .btn-link:hover { background: #1f5555; }
 
-/* ===== Layout ===== */
+
 main.container { padding: 30px 20px 60px; min-height: 70vh; }
 
-/* ===== Alerts ===== */
+
 .alert {
     padding: 12px 16px;
     border-radius: 6px;
@@ -58,7 +58,7 @@ main.container { padding: 30px 20px 60px; min-height: 70vh; }
 .alert-error { background: #fdecea; color: #a3312a; border: 1px solid #f3c6c2; }
 .alert-success { background: #e8f5e9; color: #2e6b34; border: 1px solid #bfe3c2; }
 
-/* ===== Blog cards (home page) ===== */
+
 .blog-list { display: flex; flex-direction: column; gap: 20px; }
 .blog-card {
     background: #fff;
@@ -74,7 +74,6 @@ main.container { padding: 30px 20px 60px; min-height: 70vh; }
 .blog-excerpt { color: #4a4a4a; }
 .empty-state { text-align: center; color: #8a8a8a; padding: 60px 0; }
 
-/* ===== Single blog view ===== */
 .blog-full h1 { font-size: 2rem; margin-bottom: 8px; }
 .blog-content { margin-top: 25px; }
 .blog-content h1, .blog-content h2, .blog-content h3 { margin: 20px 0 10px; }
@@ -90,7 +89,7 @@ main.container { padding: 30px 20px 60px; min-height: 70vh; }
 .blog-actions { margin-top: 25px; display: flex; gap: 12px; }
 .blog-actions form { display: inline; }
 
-/* ===== Buttons ===== */
+
 .btn {
     display: inline-block;
     background: #2a6f6f;
@@ -107,7 +106,7 @@ main.container { padding: 30px 20px 60px; min-height: 70vh; }
 .btn-secondary { background: #6b6b6b; }
 .btn-secondary:hover { background: #4f4f4f; }
 
-/* ===== Forms ===== */
+
 .form-card {
     background: #fff;
     border: 1px solid #e5e5e0;
@@ -133,7 +132,7 @@ main.container { padding: 30px 20px 60px; min-height: 70vh; }
 .form-group textarea { resize: vertical; }
 .form-footer-link { margin-top: 16px; font-size: 0.9rem; text-align: center; }
 
-/* ===== Markdown editor ===== */
+
 .editor-wrapper { display: flex; gap: 20px; flex-wrap: wrap; }
 .editor-pane, .preview-pane { flex: 1 1 320px; min-width: 280px; }
 .editor-pane textarea {
@@ -156,7 +155,7 @@ main.container { padding: 30px 20px 60px; min-height: 70vh; }
 }
 .preview-label { font-size: 0.8rem; text-transform: uppercase; color: #8a8a8a; margin-bottom: 8px; }
 
-/* ===== Footer ===== */
+
 .site-footer {
     text-align: center;
     padding: 20px 0;
@@ -165,7 +164,7 @@ main.container { padding: 30px 20px 60px; min-height: 70vh; }
     border-top: 1px solid #e5e5e0;
 }
 
-/* ===== Responsive ===== */
+
 @media (max-width: 600px) {
     .header-inner { flex-direction: column; align-items: flex-start; }
     .editor-wrapper { flex-direction: column; }

@@ -21,8 +21,7 @@ if ($result->num_rows === 0) {
 
 $blog = $result->fetch_assoc();
 
-// --- AUTHORIZATION CHECK ---
-// A user may only edit their OWN blog post, even if they guess another post's id.
+
 if ($blog['user_id'] != current_user_id()) {
     $page_title = "Not Allowed";
     require 'includes/header.php';

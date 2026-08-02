@@ -26,7 +26,7 @@ if ($result->num_rows === 0) {
 $blog = $result->fetch_assoc();
 $is_owner = is_logged_in() && current_user_id() == $blog['user_id'];
 
-// --- Simple built-in Markdown -> HTML converter (no external library needed) ---
+
 function simple_markdown($text) {
     $text = htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
 
