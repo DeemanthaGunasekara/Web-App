@@ -1,10 +1,14 @@
 <?php
-$db_host = "sql208.infinityfree.com";
-$db_user = "if0_42558129";
-$db_pass = "7o0hIcZgeo";
-$db_name = "if0_42558129_blogapplication";
+require_once __DIR__ . '/env.php';
+load_env(__DIR__ . '/../.env');
+
+$db_host = env('DB_HOST');
+$db_user = env('DB_USER');
+$db_pass = env('DB_PASS');
+$db_name = env('DB_NAME');
 
 $conn = new mysqli($db_host, $db_user, $db_pass, $db_name);
+
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
